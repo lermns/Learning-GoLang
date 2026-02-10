@@ -4,6 +4,7 @@ package ejerciciosiete
 
 import (
 	"fmt"
+	"strings"
 )
 
 func EsVocal() {
@@ -19,8 +20,8 @@ func EsVocal() {
 		return
 	}
 
-	switch string(caracter) {
-	case "A", "E", "I", "O", "U", "a", "e", "i", "o", "u":
+	switch strings.ToLower(string(caracter)) {
+	case "a", "e", "i", "o", "u":
 		fmt.Printf("El carácter %c es una vocal\n", caracter)
 	default:
 		fmt.Printf("El carácter %c no es una vocal\n", caracter)

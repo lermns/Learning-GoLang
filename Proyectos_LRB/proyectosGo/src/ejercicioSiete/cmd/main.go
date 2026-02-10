@@ -8,4 +8,5 @@ func main() {
 	// ejerciciosiete.Factorial()
 	// ejerciciosiete.SumaIndeterminada()
 	ejerciciosiete.CalcularAreaFiguras()
+	// ejerciciosiete.Prueba()
 }

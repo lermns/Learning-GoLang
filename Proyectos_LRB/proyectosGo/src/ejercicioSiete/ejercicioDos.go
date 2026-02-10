@@ -5,19 +5,23 @@ package ejerciciosiete
 
 import (
 	"fmt"
+	"math"
 )
 
 func ParImpar() {
-	var numero uint16
+	var numero int8
 
 	fmt.Print("Introduce un número entero:\n→")
 	fmt.Scanln(&numero)
+	numero = int8(math.Abs(float64(numero)))
+	//fmt.Println(numero)
 
-	for i := uint16(1); i <= numero; i++ {
+	// parseamos i a int8 para su comparación con numero
+	for i := int8(1); i <= numero; i++ {
 		if i%2 == 0 {
 			fmt.Printf("%d - es par\n", i)
-		} else {
-			fmt.Printf("%d - es impar\n", i)
+			continue
 		}
+		fmt.Printf("%d - es impar\n", i)
 	}
 }

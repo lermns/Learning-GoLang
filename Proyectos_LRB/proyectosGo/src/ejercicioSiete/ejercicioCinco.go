@@ -16,39 +16,30 @@ func CalcularAreaFiguras() {
 	var opcion int
 
 	// Menú de opciones en bucle
-	for i := 0; i < 1; {
+	for {
 		// Mostrar menú
 		menu()
 		fmt.Scanln(&opcion)
-
-		// Incrementar i solo si la opción es salir
-		if opcion == 3 {
-			i++
-		}
 
 		// Procesar opción seleccionada con switch
 		switch opcion {
 
 		case 1:
+			// Solicitar los lados al usuario
+			guardarLados()
 			// Calcular Rectángulo con método
-			// Solicitar los lados al usuario
-			guardarLados()
-			fmt.Println("El área del rectángulo es: ", areaRect())
-
+			fmt.Println("\nEl área del rectángulo es: ", areaRect())
 		case 2:
-			// Calcular Triangulo con método
 			// Solicitar los lados al usuario
 			guardarLados()
-			fmt.Println("El área del triángulo es: ", areaTri())
-
+			// Calcular Triangulo con método
+			fmt.Println("\nEl área del triángulo es: ", areaTri())
 		case 3:
 			fmt.Println("Saliendo...")
 			return
-
 		default:
-			fmt.Println("Opción no válida, intente de nuevo.")
+			fmt.Println("\nOpción no válida, intente de nuevo.")
 		}
-
 	}
 }
 

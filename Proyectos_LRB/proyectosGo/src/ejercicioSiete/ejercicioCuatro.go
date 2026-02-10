@@ -7,13 +7,19 @@ import (
 	"fmt"
 )
 
+const LIMIT = 50
+
 func SumaIndeterminada() {
 	var num, sum uint32
 
-	for sum < 50 {
+	for sum < LIMIT { //16-48-49-50(sale del for)
 		fmt.Print("Introduce un número entero:\n→")
-		fmt.Scanln(&num)
-		sum += num
+		fmt.Scanln(&num) //16-32-1-1
+		sum += num       //16-48-49-50
+		if sum > LIMIT {
+			sum -= num
+			fmt.Println("fuera de rango")
+		}
 	}
 
 	fmt.Printf("La suma total es %d.\n", sum)
