@@ -5,5 +5,6 @@ import (
 )
 
 func main() {
-	pruebas.Pruebas()
+	//pruebas.Pruebas()
+	pruebas.PruebaB()
 }
